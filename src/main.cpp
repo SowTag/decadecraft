@@ -1,14 +1,10 @@
-#include "rendering/glfw/Window.h"
+#include "engine/Engine.h"
 
 int main() {
-    const Window window(800, 600, "Decadecraft");
+    Engine engine;
 
-    while (window.shouldStayOpen()) {
-
-
-        window.swapBuffers();
-        Window::pollEvents();
-    }
+    engine.init();
+    engine.run();
 
     return 0;
 }
