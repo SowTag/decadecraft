@@ -1,3 +1,6 @@
 target_precompile_headers(${CMAKE_PROJECT_NAME} PRIVATE
-    <iostream>
+        <iostream>
+        <glad/gl.h>
+        <GLFW/glfw3.h>
+        <chrono>
 )
