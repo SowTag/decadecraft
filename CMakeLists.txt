@@ -8,8 +8,8 @@ include(FetchContent)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 add_executable(decadecraft src/main.cpp
-        src/rendering/glfw/GLFWContext.cpp
-        src/rendering/glfw/GLFWContext.h
+        src/rendering/glfw/Window.cpp
+        src/rendering/glfw/Window.h
         src/debug/tracing.h
 )
 
