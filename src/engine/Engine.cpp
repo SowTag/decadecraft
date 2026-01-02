@@ -16,7 +16,16 @@ void Engine::init() {
 }
 
 void Engine::run() const {
+    double lastFrameTime = glfwGetTime();
+
     while (m_Window.shouldStayOpen()) {
+        const double currentFrameTime = glfwGetTime();
+        auto deltaTime = static_cast<float>(currentFrameTime - lastFrameTime);
+        lastFrameTime = currentFrameTime;
+
+        // update stuff
+
+
         m_Window.swapBuffers();
         Window::pollEvents();
     }
