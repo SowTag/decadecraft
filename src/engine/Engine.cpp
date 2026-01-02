@@ -11,9 +11,7 @@ Engine::Engine() : m_Window(800, 600, "Decadecraft") {
 
 }
 
-Engine::~Engine() {
-
-}
+Engine::~Engine() = default;
 
 void Engine::init() {
 }
