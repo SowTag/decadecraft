@@ -6,10 +6,21 @@
 
 #include "GLFW/glfw3.h"
 
-Window::Window(const unsigned int width, const unsigned int height, const char* title) {
+#include "../../engine/Engine.h"
+#include "../../debug/opengl.h"
+
+Window::Window(const unsigned int width, const unsigned int height, const char *title) {
     if (!glfwInit()) {
         throw std::runtime_error("Failed to initialize GLFW");
     }
+
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+#if DECADECRAFT_DEBUG
+    glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, true);
+#endif
 
     m_Window = glfwCreateWindow(static_cast<int>(width), static_cast<int>(height), title, nullptr, nullptr);
     if (!m_Window) {
@@ -23,7 +34,11 @@ Window::Window(const unsigned int width, const unsigned int height, const char* 
         throw std::runtime_error("Failed to initialize OpenGL context\n");
     }
 
-    std::cout << "Loaded OpenGL " << GLAD_VERSION_MAJOR(openGLVersion) << "." << GLAD_VERSION_MINOR(openGLVersion);
+    std::cout << "Loaded OpenGL " << GLAD_VERSION_MAJOR(openGLVersion) << "." << GLAD_VERSION_MINOR(openGLVersion) << std::endl;
+
+#if DECADECRAFT_DEBUG
+    enableOpenGLDebug();
+#endif
 }
 
 Window::~Window() {
