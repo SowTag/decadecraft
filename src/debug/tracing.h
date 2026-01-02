@@ -18,7 +18,7 @@ public:
     ~FunctionTracer() {
         const auto end_time = std::chrono::high_resolution_clock::now();
         const auto duration_us = std::chrono::duration_cast<std::chrono::microseconds>(end_time - startTime);
-        long long count = duration_us.count();
+        const long long count = duration_us.count();
 
         std::string unit;
         double value;
