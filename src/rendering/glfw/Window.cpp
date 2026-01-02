@@ -6,7 +6,7 @@
 
 #include "GLFW/glfw3.h"
 
-Window::Window(unsigned int width, unsigned int height, const char* title) {
+Window::Window(const unsigned int width, const unsigned int height, const char* title) {
     if (!glfwInit()) {
         throw std::runtime_error("Failed to initialize GLFW");
     }
