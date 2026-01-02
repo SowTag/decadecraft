@@ -2,7 +2,7 @@
 // Created by maddock on 1/2/26.
 //
 
-#include "VertexArray.h"
+#include "../VertexArray.h"
 
 VertexArray::VertexArray() {
     glGenVertexArrays(1, &m_ID);

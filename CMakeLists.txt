@@ -11,10 +11,10 @@ add_executable(decadecraft src/main.cpp
         src/rendering/glfw/Window.cpp
         src/rendering/glfw/Window.h
         src/debug/tracing.h
-        src/rendering/opengl/VertexArray.cpp
-        src/rendering/opengl/VertexArray.h
-        src/rendering/opengl/VertexBuffer.cpp
-        src/rendering/opengl/VertexBuffer.h
+        src/rendering/opengl/wrappers/VertexArray.cpp
+        src/rendering/opengl/wrappers/VertexArray.h
+        src/rendering/opengl/wrappers/VertexBuffer.cpp
+        src/rendering/opengl/wrappers/VertexBuffer.h
         src/engine/Engine.cpp
         src/engine/Engine.h
         src/debug/opengl.h
