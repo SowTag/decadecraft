@@ -18,6 +18,8 @@ add_executable(decadecraft src/main.cpp
         src/engine/Engine.cpp
         src/engine/Engine.h
         src/debug/opengl.h
+        src/rendering/opengl/wrappers/VertexBufferLayout.cpp
+        src/rendering/opengl/wrappers/VertexBufferLayout.h
 )
 
 
