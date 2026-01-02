@@ -2,7 +2,7 @@
 // Created by maddock on 1/2/26.
 //
 
-#include "../VertexBuffer.h"
+#include "VertexBuffer.h"
 
 
 VertexBuffer::VertexBuffer(const void *data, const unsigned int size, const unsigned int usage) {
