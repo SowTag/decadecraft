@@ -4,7 +4,6 @@
 
 #include "Engine.h"
 
-#include "../debug/opengl.h"
 #include "../rendering/glfw/Window.h"
 
 Engine::Engine() : m_Window(800, 600, "Decadecraft") {
