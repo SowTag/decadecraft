@@ -24,3 +24,5 @@ target_link_libraries(decadecraft PRIVATE
         glad
         glfw
 )
+
+include(CompilerOptions)
