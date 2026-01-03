@@ -5,6 +5,7 @@
 #include "Engine.h"
 
 #include "../rendering/glfw/Window.h"
+#include "GLFW/glfw3.h"
 
 Engine::Engine() : m_Window(800, 600, "Decadecraft") {
 
@@ -13,6 +14,7 @@ Engine::Engine() : m_Window(800, 600, "Decadecraft") {
 Engine::~Engine() = default;
 
 void Engine::init() {
+
 }
 
 void Engine::run() const {
@@ -24,7 +26,7 @@ void Engine::run() const {
         lastFrameTime = currentFrameTime;
 
         // update stuff
-
+        temp_SquareRenderer.render();
 
         m_Window.swapBuffers();
         Window::pollEvents();

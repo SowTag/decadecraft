@@ -8,6 +8,7 @@
 #define DECADECRAFT_DEBUG true
 
 #include "../rendering/glfw/Window.h"
+#include "../rendering/opengl/renderers/square.h"
 
 class Engine {
 public:
@@ -19,6 +20,8 @@ public:
 
 private:
     Window m_Window;
+
+    SquareRenderer temp_SquareRenderer;
 };
 
 
