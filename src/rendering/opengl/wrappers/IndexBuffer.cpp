@@ -3,9 +3,10 @@
 //
 
 #include "IndexBuffer.h"
+#include <glad/gl.h>
 
 IndexBuffer::IndexBuffer(const unsigned int *data, const unsigned int count) : m_Count(count) {
-    glGenBuffers(GL_ELEMENT_ARRAY_BUFFER, &m_ID);
+    glGenBuffers(1, &m_ID);
     bind();
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, static_cast<GLsizeiptr>(count * sizeof(unsigned int)), data, GL_STATIC_DRAW);
 }
