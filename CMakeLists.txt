@@ -22,6 +22,8 @@ add_executable(decadecraft src/main.cpp
         src/rendering/opengl/wrappers/VertexBufferLayout.h
         src/rendering/opengl/wrappers/IndexBuffer.cpp
         src/rendering/opengl/wrappers/IndexBuffer.h
+        src/rendering/opengl/wrappers/ShaderProgram.cpp
+        src/rendering/opengl/wrappers/ShaderProgram.h
 )
 
 
