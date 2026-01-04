@@ -25,7 +25,7 @@ public:
     Window &operator=(const Window &) = delete;
 
 private:
-    GLFWwindow *m_Window;
+    GLFWwindow *m_Window{};
 };
 
 

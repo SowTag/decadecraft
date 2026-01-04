@@ -27,6 +27,11 @@ Window::Window(const unsigned int width, const unsigned int height, const char *
         throw std::runtime_error("Failed to initialize GLFW window");
     }
 
+    glfwSetFramebufferSizeCallback(m_Window, [](GLFWwindow */*window*/, const int width, const int height) {
+        glViewport(0, 0, width, height);
+    });
+
+
     glfwMakeContextCurrent(m_Window);
 
     const int openGLVersion = gladLoadGL(glfwGetProcAddress);
@@ -34,7 +39,8 @@ Window::Window(const unsigned int width, const unsigned int height, const char *
         throw std::runtime_error("Failed to initialize OpenGL context\n");
     }
 
-    std::cout << "Loaded OpenGL " << GLAD_VERSION_MAJOR(openGLVersion) << "." << GLAD_VERSION_MINOR(openGLVersion) << std::endl;
+    std::cout << "Loaded OpenGL " << GLAD_VERSION_MAJOR(openGLVersion) << "." << GLAD_VERSION_MINOR(openGLVersion) <<
+            std::endl;
 
 #if DECADECRAFT_DEBUG
     enableOpenGLDebug();
